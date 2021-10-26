@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 14</title>
+</head>
+<body>
+    <script>
+        const palavra = 'Ana';
+        function checkPalindromo(texto) {
+            const espaco = texto => texto.split(' ').join('');
+              let reversed = [...texto].reverse().join("")
+            return espaco(texto.toLowerCase()) === espaco(reversed.toLowerCase())
+        }
+        if (checkPalindromo(palavra)) {
+                document.write(`${palavra} é palindroma`)
+            } else {
+                document.write(`${palavra} não é palindroma`)
+            }
+    </script>
+</body>
+</html>

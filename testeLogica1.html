@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 1</title>
+</head>
+<body>
+    <script>
+        const idadeI = 1;
+        const idadeJ = 2;
+        const idadeK = 2;
+        const idadeX = 3;
+        const idadeY = 4;
+        let idades = [idadeI, idadeJ, idadeK, idadeX, idadeY];
+        function mediaIdade() {
+            let media = 0
+            for (let i in idades) {
+                media += idades[i]
+            }
+            return media
+        }
+        document.write(mediaIdade() / idades.length);
+    </script>
+</body>
+</html>

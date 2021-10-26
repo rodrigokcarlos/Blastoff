@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 6</title>
+</head>
+<body>
+    <script>
+        const inicioPartida = "20211026 16:30";
+        const fimPartida = "20211026 18:40";
+        const date1 = new Date(inicioPartida.slice(0, 4), inicioPartida.slice(4, 6), inicioPartida.slice(6, 8), inicioPartida.slice(9, 11), inicioPartida.slice(12, 14)),
+            date2 = new Date(fimPartida.slice(0, 4), fimPartida.slice(4, 6), fimPartida.slice(6, 8), fimPartida.slice(9, 11), fimPartida.slice(12, 14));
+        const diffMs = (date2 - date1);
+        const diffHrs = Math.floor((diffMs % 86400000) / 3600000);
+        const diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000);
+        const diff = diffHrs + 'h ' + diffMins + 'm';
+        document.write(`A partida teve duração de ${diff}`);
+    </script>
+</body>
+</html>
